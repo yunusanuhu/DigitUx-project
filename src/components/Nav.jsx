@@ -1,13 +1,18 @@
 import { navLinks } from "../constants";
 import headerLogo from "../assets/images/headerLogo.png";
 import Button from "./Button";
+import hamburger from "../assets/images/feather_menu.png";
+import { useState } from "react";
 const Nav = () => {
+  const [isPreset, setIsPresent] = useState(true);
+
   return (
-    <nav className="flex justify-between items-center mt-8">
+    <nav className="flex justify-between items-center m-5 lg:justify-between ">
       <a href="#">
         <img src={headerLogo} alt="logo" width={120} height={48} />
       </a>
-      <ul className="flex items-center gap-6 max-lg:hidden">
+
+      <ul className="hidden lg:flex items-center lg:gap-6">
         {navLinks.map((item) => (
           <li key={item.label} className="p-1">
             <a
@@ -19,7 +24,13 @@ const Nav = () => {
           </li>
         ))}
       </ul>
-      <Button label="Get a quote" />
+      <div className="hidden lg:block">
+        <Button label="Get a quote" />
+      </div>
+
+      <div className="lg:hidden">
+        <img src={hamburger} alt="Hamburger" width={25} height={25} />
+      </div>
     </nav>
   );
 };

@@ -12,21 +12,19 @@ import uiKit from "../assets/images/uiKitVector.png";
 import titik from "../assets/images/Titik-titik.png";
 const Hero = () => {
   return (
-    <div className="w-full mt-32 flex justify-between gap-28">
-      <div className="w-1/2 relative">
+    <div className="m-5 lg:flex lg:justify-between lg:flex-row md:flex-col">
+      <div className="lg:pt-10 lg:max-w-[540px] ">
         <h2 className="text-blue-600 font-bold mt-5">Hello,</h2>
-        <h1 className="capitalize mt-4 font-bold text-4xl leading-normal">
-          We Help People to
-          <br />
-          bring their ideas
-          <br />
+        <h1 className="capitalize mt-4 font-bold text-4xl lg:text-6xl leading-normal">
+          We Help People to <br className="hidden lg:block" />
+          bring their ideas <br className="hidden lg:block" />
           Alive
         </h1>
-        <p className="font-normal mt-3">
+        <p className="font-normal text-lg lg:text-2xl text-gray-600 my-6 lg:leading-10">
           A talented team to help you in your journey on creating useful and
           easy to use product
         </p>
-        <div className="flex items-center mt-12">
+        <div className="flex flex-col justify-center items-center gap-6 lg:flex-row lg:justify-start">
           <Button label="Lets talk" imgUrl={featherMessage} />
           <div className="flex items-center ml-5">
             <p className="font-medium mr-2">Check our services</p>
@@ -38,21 +36,25 @@ const Hero = () => {
             />
           </div>
         </div>
-        <div className="absolute top-28 -m-20">
+        <div className="hidden lg:block absolute top-28 -m-20">
           <img src={vectorArrow} alt="vector arrow" className="h-80" />
         </div>
       </div>
-      <div className="relative mr-10 -mt-10">
-        <img src={heroStar} alt="hero star" className="relative w-96" />
+      <div className="hidden lg:block relative lg:mr-10">
+        <img
+          src={heroStar}
+          alt="hero star"
+          className="relative lg:h-auto max-w-[450px] "
+        />
         <img
           src={heroPicture}
           alt="hero picture"
-          className="absolute top-8 w-96"
+          className="absolute top-8 lg:h-auto max-w-[450px] "
         />
-        <div className="absolute top-20 -ml-10">
+        <div className="absolute top-28 -ml-10">
           <Group iconUrl={searchVector} label="UI/UX Designer" />
         </div>
-        <div className="absolute top-80 -ml-10">
+        <div className="absolute top-96 -ml-10">
           <Group iconUrl={bellVector} label="Icons" />
         </div>
         <div className="absolute top-44 right-0 -mr-20">

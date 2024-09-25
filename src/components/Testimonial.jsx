@@ -1,6 +1,6 @@
 const Testimonial = ({ paragraph, imgUrl, name, rank }) => {
   return (
-    <div className="max-w-[540px] p-10">
+    <div className="max-width-[540px] lg:p-10">
       <p className="text-slate-600 text-xl">{paragraph}</p>
       <div className="mt-10 flex items-center gap-5">
         <img src={imgUrl} alt="male pic" />

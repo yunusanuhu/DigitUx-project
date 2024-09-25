@@ -19,19 +19,22 @@ import testimonialMale from "../assets/images/testimonial_male.png";
 import testimonialFemale from "../assets/images/testimonial_female.png";
 import Testimonial from "../components/Testimonial";
 import headerLogo from "../assets/images/headerLogo.png";
+import featherSend from "../assets/images/feather_send.png";
 
 const Home = () => {
   return (
     <main className="">
-      <header className="min-h-screen w-4/6 mx-auto">
+      <header className="lg:w-[80%] lg:mx-auto lg:min-h-screen">
         <Nav />
-        <section>
+        <section className="lg:mt-20">
           <Hero />
         </section>
       </header>
-      <section className="mb-20 w-4/6 mx-auto">
-        <h2 className="font-bold capitalize my-8">Clients we helped</h2>
-        <div className="flex justify-between items-center ">
+      <section className="p-5 lg:w-[80%] lg:mx-auto">
+        <h2 className="font-bold capitalize my-4 text-center lg:text-start">
+          Clients we helped
+        </h2>
+        <div className="flex flex-col items-center gap-10 lg:flex-row lg:justify-between lg:mt-10">
           {clients.map((client) => (
             <div key={client.imgUrl}>
               <img src={client.imgUrl} alt="microsoft logo" />
@@ -39,12 +42,12 @@ const Home = () => {
           ))}
         </div>
       </section>
-      <section className="mt-20 w-4/6 mx-auto">
+      <section className="mt-10 p-6 lg:w-[80%] lg:mx-auto">
         <h2 className="font-bold text-blue-600 text-xl capitalize">
           The services we offer
         </h2>
-        <div className="mt-6 mb-20 grid grid-cols-4 gap-8">
-          <div className="col-span-2">
+        <div className="mt-6 mb-20 grid grid-cols-1 gap-8 lg:grid-cols-4">
+          <div className="lg:col-span-2">
             <h1 className="text-black text-4xl font-bold">
               We offer a variety of services to help you to grow and build your
               brand and help you with developing your products
@@ -88,15 +91,15 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="flex justify-between gap-5 mb-20 w-4/6 mx-auto">
-        <div className="w-[540px]">
+      <section className=" mb-20 p-6 lg:w-[80%] lg:mx-auto lg:flex lg:justify-between lg:gap-5">
+        <div className="max-width:[500px]">
           <h2 className="font-bold text-blue-600 text-xl capitalize ">
             The Team behind DigitUX
           </h2>
-          <h1 className="text-black text-4xl font-bold mt-6 mb-10">
+          <h1 className="text-black text-4xl font-bold mt-6 mb-10 lg:max-w-[500px]">
             A team of creative Who Excited to help you with your Idea
           </h1>
-          <p className="text-xl leading-8 text-slate-600 ">
+          <p className="text-xl leading-8 text-slate-600 lg:max-w-[500px]">
             Our team of digital product creators and Tch Bring Skilled will take
             your idea to the next level and help you with your product
           </p>
@@ -114,20 +117,20 @@ const Home = () => {
             <RoundButton imgUrl={arrowFeatherRight} />
           </div>
           <img
-            className="absolute top-0 right-0 -z-10 w-[267px]"
+            className="absolute top-0 right-0 -z-10 h-auto w-[267px]"
             src={titik}
             alt="tikitak"
           />
         </div>
       </section>
-      <section className="mb-36 w-4/6 mx-auto">
+      <section className="mb-36 p-6 lg:w-[80%] lg:mx-auto">
         <h2 className="font-bold text-blue-600 text-xl capitalize ">
           The work we realised
         </h2>
-        <h1 className="text-black text-4xl font-bold mt-6 mb-10 max-w-[540px]">
+        <h1 className="text-black text-4xl font-bold mt-6 mb-10 max-width-[540px]">
           The work we did that made our Client happy and satisfied
         </h1>
-        <div className="grid grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
           <div>
             <GridPicture
               imgUrl={gridPic1}
@@ -142,7 +145,7 @@ const Home = () => {
               content="Cook Me"
             />
           </div>
-          <div className="row-span-2">
+          <div className="lg:row-span-2">
             <GridPicture
               imgUrl={gridPic3}
               heading="UI/UX Design"
@@ -164,48 +167,83 @@ const Home = () => {
             />
           </div>
         </div>
-        <div className="my-24 flex flex-row justify-center items-center">
+        <div className="my-12 flex flex-row justify-center items-center">
           <PlainButton label="Explore More Projects" imgUrl={featherRight} />
         </div>
       </section>
-      <section className="bg-slate-100 py-20">
-        <div className="w-4/6 mx-auto">
+      <section className="bg-slate-100 py-10">
+        <div className="p-6 lg:w-[80%] mx-auto">
           <h2 className="font-bold text-blue-600 text-xl capitalize ">
             Testmonial
           </h2>
-          <h1 className="text-black text-4xl font-bold mt-6 mb-10 leading-relaxed">
-            You still hesitate about working with Us ? <br />
+          <h1 className="text-black text-2xl lg:text-4xl font-bold mt-6 mb-10 leading-normal">
+            You still hesitate about working with Us ?
+            <br className="hidden lg:block" />
             Check what They say about Us
           </h1>
           <div className="flex flex-row justify-evenly items-center">
-            <Testimonial
-              paragraph="Our team of digital product creators and Tch Bring Skilled will take
+            <div>
+              <Testimonial
+                paragraph="Our team of digital product creators and Tch Bring Skilled will take
         your idea to the next level and help you with your product"
-              imgUrl={testimonialMale}
-              name="Smail yefsssah"
-              rank="CEO Innova"
-            />
-            <Testimonial
-              paragraph="Our team of digital product creators and Tch Bring Skilled will take
+                imgUrl={testimonialMale}
+                name="Smail yefsssah"
+                rank="CEO Innova"
+              />
+            </div>
+            <div className="hidden lg:block">
+              <Testimonial
+                paragraph="Our team of digital product creators and Tch Bring Skilled will take
         your idea to the next level and help you with your product"
-              imgUrl={testimonialFemale}
-              name="Djamila Malak"
-              rank="Co-Founder RobaKabyle"
-            />
+                imgUrl={testimonialFemale}
+                name="Djamila Malak"
+                rank="Co-Founder RobaKabyle"
+              />
+            </div>
           </div>
-          <div className="flex flex-row justify-center items-center gap-10 my-5">
+          <div className="flex flex-row justify-center items-center gap-20 my-10">
             <RoundButton imgUrl={arrowFeatherLeft} />
             <RoundButton imgUrl={arrowFeatherRight} />
           </div>
         </div>
       </section>
-      <section className="bg-slate-100 py-20">
-        <footer>
+      <section className="bg-slate-100 mt-24 ">
+        <footer className="p-6 pb-24 grid grid-cols-2">
           <div>
             <img src={headerLogo} alt="" />
+            <p className="mt-5 text-gray-600 text-2xl pr-3">
+              DigitUx is a Digital agencay that create User centred Product that
+              help her client to evolve
+            </p>
+          </div>
+          <div>
+            <h2 className="text-black font-bold text-2xl">
+              Get In touch with Us
+            </h2>
+            <p className="mt-5 text-gray-600 text-xl">
+              Need Answers? Need help ? Just email us
+            </p>
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Your email"
+                className="w-full border-2 p-5 pr-14 outline-none text-xl mt-5 border-gray-600 rounded-lg"
+              />
+              <img
+                src={featherSend}
+                alt="feather send"
+                width={30}
+                className="absolute top-11 right-5"
+              />
+            </div>
           </div>
         </footer>
       </section>
+      <div className="bg-sky-950">
+        <p className="text-white text-center p-10 font-semibold text-lg">
+          Designed By Hmimi Chioukh 2022
+        </p>
+      </div>
     </main>
   );
 };
