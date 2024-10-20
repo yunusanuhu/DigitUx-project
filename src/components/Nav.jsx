@@ -3,11 +3,11 @@ import headerLogo from "../assets/images/headerLogo.png";
 import Button from "./Button";
 import hamburger from "../assets/images/feather_menu.png";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 const Nav = () => {
   const [isPreset, setIsPresent] = useState(true);
   const navigate = useNavigate();
-
+  const isActive = false;
   return (
     <nav className="flex justify-between items-center m-5 lg:justify-between ">
       <a href="#">
@@ -17,12 +17,16 @@ const Nav = () => {
       <ul className="hidden lg:flex items-center lg:gap-6">
         {navLinks.map((item) => (
           <li key={item.label} className="p-1">
-            <a
-              href={item.href}
-              className="font-poppins font-semibold text-slate-500 "
+            <NavLink
+              to={item.href}
+              className={({ isActive }) =>
+                isActive
+                  ? "font-poppins font-bold text-slate-900" // Bold when active
+                  : "font-poppins font-semibold text-slate-500"
+              }
             >
               {item.label}
-            </a>
+            </NavLink>
           </li>
         ))}
       </ul>

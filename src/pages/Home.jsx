@@ -3,10 +3,6 @@ import Hero from "../components/Hero";
 import { clients } from "../constants";
 import Card from "../components/Card";
 import teamPicture from "../assets/images/team-picture.png";
-import arrowFeatherLeft from "../assets/images/feather_arrow-left.png";
-import arrowFeatherRight from "../assets/images/feather_arrow-right1.png";
-import RoundButton from "../components/RoundButton";
-import titik from "../assets/images/Titik-titik.png";
 import gridPic1 from "../assets/images/grid_pic1.png";
 import GridPicture from "../components/GridPicture";
 import gridPic2 from "../assets/images/grid_pic2.png";
@@ -16,8 +12,8 @@ import gridPic5 from "../assets/images/grid_pic5.png";
 import PlainButton from "../components/PlainButton";
 import featherRight from "../assets/images/feather_chevron-right.png";
 import Footer from "../components/Footer";
-import TeamPicture from "../components/TeamPicture";
 import TestimonialContainer from "../components/TestimonialContainer";
+import ThirdHero from "../components/ThirdHero";
 const Home = () => {
   return (
     <main className="">
@@ -88,36 +84,18 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className=" mb-20 p-6 lg:w-[80%] lg:mx-auto lg:flex lg:justify-between lg:gap-5">
-        <div className="max-width:[500px]">
-          <h2 className="font-bold text-blue-600 text-xl capitalize ">
-            The Team behind DigitUX
-          </h2>
-          <h1 className="text-black text-4xl font-bold mt-6 mb-10 lg:max-w-[500px]">
-            A team of creative Who Excited to help you with your Idea
-          </h1>
-          <p className="text-xl leading-8 text-slate-600 lg:max-w-[500px]">
-            Our team of digital product creators and Tch Bring Skilled will take
-            your idea to the next level and help you with your product
-          </p>
-        </div>
-        <div className="relative">
-          <TeamPicture
-            imgUrl={teamPicture}
-            picName={"Jamila Smail"}
-            picPortfolio={"Co-Founder"}
-          />
-          <div className="flex gap-10 justify-end m-8 mr-32">
-            <RoundButton imgUrl={arrowFeatherLeft} />
-            <RoundButton imgUrl={arrowFeatherRight} />
-          </div>
-          <img
-            className="hidden lg:block absolute top-0 right-0 -z-10 h-auto w-[267px]"
-            src={titik}
-            alt="tikitak"
-          />
-        </div>
-      </section>
+
+      <ThirdHero
+        title={"The Team behind DigitUX"}
+        header={"A team of creative Who Excited to help you with your Idea"}
+        content={
+          "Our team of digital product creators and Tch Bring Skilled will take your idea to the next level and help you with your product"
+        }
+        pictureUrl={teamPicture}
+        pictureName={"Jamila Smail"}
+        picturePortforlio={"Co-Founder"}
+      />
+
       <section className="mb-36 p-6 lg:w-[80%] lg:mx-auto">
         <h2 className="font-bold text-blue-600 text-xl capitalize ">
           The work we realised

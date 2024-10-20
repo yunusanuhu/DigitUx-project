@@ -1,7 +1,4 @@
 import Nav from "../components/Nav";
-import Button from "../components/Button";
-import featherMessage from "../assets/images/feather_message-square.png";
-import featherArrow from "../assets/images/feather_arrow-right.png";
 import TeamPicture from "../components/TeamPicture";
 import teamPicture from "../assets/images/team-picture.png";
 import teamPicture2 from "../assets/images/team_picture2.png";
@@ -12,6 +9,7 @@ import arrowFeatherRight from "../assets/images/feather_arrow-right1.png";
 import RoundButton from "../components/RoundButton";
 import TestimonialContainer from "../components/TestimonialContainer";
 import Footer from "../components/Footer";
+import SecondHero from "../components/SecondHero";
 
 const WhoWeAre = () => {
   return (
@@ -20,32 +18,13 @@ const WhoWeAre = () => {
         <Nav />
       </header>
       <section className="p-5 lg:w-[80%] lg:mx-auto">
-        <div className="lg:flex lg:flex-col lg:justify-center lg:items-center lg:max-w-[768px] lg:mx-auto">
-          <h2 className="font-bold text-blue-600 text-lg lg:text-[22px] capitalize">
-            About Us
-          </h2>
-          <h1 className="font-bold text-black text-3xl lg:text-[40px] lg:text-center p-0 mt-3 mb-3">
-            What we do is what make us Who we are
-          </h1>
-          <p className="mt-6 text-gray-600 lg:text-center lg:text-[22px]">
-            DigitUx is a Digital agencay founded 2022, that create User Centred
-            Product that help her client to evolve ,our core idealogy is
-            Perfection , our goal is to make usefull and easy to use products
-            And help people to grow their business,
-          </p>
-          <div className="flex flex-col justify-center items-center gap-6 mt-12 lg:flex-row lg:justify-start ">
-            <Button label="Lets talk" imgUrl={featherMessage} />
-            <div className="flex items-center ml-5">
-              <p className="font-medium mr-2">Check our services</p>
-              <img
-                src={featherArrow}
-                alt="feather arrow"
-                width={14}
-                height={14}
-              />
-            </div>
-          </div>
-        </div>
+        <SecondHero
+          title={"About Us"}
+          header={"What we do is what make us Who we are"}
+          content={
+            "DigitUx is a Digital agencay founded 2022, that create User Centred Product that help her client to evolve ,our core idealogy is Perfection, our goal is to make usefull and easy to use products And help people to grow their business,"
+          }
+        />
       </section>
       <section className="p-5 mb-20 lg:w-[80%] lg:mx-auto">
         <div>

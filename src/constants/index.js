@@ -10,11 +10,11 @@ import twitter from "../assets/images/feather_twitter.png";
 import dribbble from "../assets/images/feather_dribbble.png";
 
 export const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#whoweare", label: "Who are we ?" },
-  { href: "#ourservices", label: "Our Services" },
-  { href: "#ourprojects", label: "Our Projects" },
-  { href: "#contactus", label: "Contact Us" },
+  { href: "/", label: "Home" },
+  { href: "/whoweare", label: "Who are we ?" },
+  { href: "/ourservices", label: "Our Services" },
+  { href: "/ourprojects", label: "Our Projects" },
+  { href: "/contactus", label: "Contact Us" },
 ];
 
 export const footerNavLinks = [
