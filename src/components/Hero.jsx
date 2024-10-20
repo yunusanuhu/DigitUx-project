@@ -36,8 +36,8 @@ const Hero = () => {
             />
           </div>
         </div>
-        <div className="hidden lg:block absolute top-28 -m-20">
-          <img src={vectorArrow} alt="vector arrow" className="h-80" />
+        <div className="hidden lg:block absolute top-[300px] -m-20">
+          <img src={vectorArrow} alt="vector arrow" className="max-h-[360px]" />
         </div>
       </div>
       <div className="hidden lg:block relative lg:mr-10">

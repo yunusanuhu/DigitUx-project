@@ -3,8 +3,10 @@ import headerLogo from "../assets/images/headerLogo.png";
 import Button from "./Button";
 import hamburger from "../assets/images/feather_menu.png";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const Nav = () => {
   const [isPreset, setIsPresent] = useState(true);
+  const navigate = useNavigate();
 
   return (
     <nav className="flex justify-between items-center m-5 lg:justify-between ">

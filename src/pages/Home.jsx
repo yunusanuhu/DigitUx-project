@@ -15,12 +15,9 @@ import gridPic4 from "../assets/images/grid_pic4.png";
 import gridPic5 from "../assets/images/grid_pic5.png";
 import PlainButton from "../components/PlainButton";
 import featherRight from "../assets/images/feather_chevron-right.png";
-import testimonialMale from "../assets/images/testimonial_male.png";
-import testimonialFemale from "../assets/images/testimonial_female.png";
-import Testimonial from "../components/Testimonial";
-import headerLogo from "../assets/images/headerLogo.png";
-import featherSend from "../assets/images/feather_send.png";
-
+import Footer from "../components/Footer";
+import TeamPicture from "../components/TeamPicture";
+import TestimonialContainer from "../components/TestimonialContainer";
 const Home = () => {
   return (
     <main className="">
@@ -105,19 +102,17 @@ const Home = () => {
           </p>
         </div>
         <div className="relative">
-          <img
-            src={teamPicture}
-            alt="team picture"
-            className="mr-32 mt-10 w-[350px]"
+          <TeamPicture
+            imgUrl={teamPicture}
+            picName={"Jamila Smail"}
+            picPortfolio={"Co-Founder"}
           />
-          <p className="text-black text-xl font-bold my-5">Jamila Smail</p>
-          <p className="text-slate-600 font-semibold mb-5">Co-Founder</p>
           <div className="flex gap-10 justify-end m-8 mr-32">
             <RoundButton imgUrl={arrowFeatherLeft} />
             <RoundButton imgUrl={arrowFeatherRight} />
           </div>
           <img
-            className="absolute top-0 right-0 -z-10 h-auto w-[267px]"
+            className="hidden lg:block absolute top-0 right-0 -z-10 h-auto w-[267px]"
             src={titik}
             alt="tikitak"
           />
@@ -171,79 +166,8 @@ const Home = () => {
           <PlainButton label="Explore More Projects" imgUrl={featherRight} />
         </div>
       </section>
-      <section className="bg-slate-100 py-10">
-        <div className="p-6 lg:w-[80%] mx-auto">
-          <h2 className="font-bold text-blue-600 text-xl capitalize ">
-            Testmonial
-          </h2>
-          <h1 className="text-black text-2xl lg:text-4xl font-bold mt-6 mb-10 leading-normal">
-            You still hesitate about working with Us ?
-            <br className="hidden lg:block" />
-            Check what They say about Us
-          </h1>
-          <div className="flex flex-row justify-evenly items-center">
-            <div>
-              <Testimonial
-                paragraph="Our team of digital product creators and Tch Bring Skilled will take
-        your idea to the next level and help you with your product"
-                imgUrl={testimonialMale}
-                name="Smail yefsssah"
-                rank="CEO Innova"
-              />
-            </div>
-            <div className="hidden lg:block">
-              <Testimonial
-                paragraph="Our team of digital product creators and Tch Bring Skilled will take
-        your idea to the next level and help you with your product"
-                imgUrl={testimonialFemale}
-                name="Djamila Malak"
-                rank="Co-Founder RobaKabyle"
-              />
-            </div>
-          </div>
-          <div className="flex flex-row justify-center items-center gap-20 my-10">
-            <RoundButton imgUrl={arrowFeatherLeft} />
-            <RoundButton imgUrl={arrowFeatherRight} />
-          </div>
-        </div>
-      </section>
-      <section className="bg-slate-100 mt-24 ">
-        <footer className="p-6 pb-24 grid grid-cols-2">
-          <div>
-            <img src={headerLogo} alt="" />
-            <p className="mt-5 text-gray-600 text-2xl pr-3">
-              DigitUx is a Digital agencay that create User centred Product that
-              help her client to evolve
-            </p>
-          </div>
-          <div>
-            <h2 className="text-black font-bold text-2xl">
-              Get In touch with Us
-            </h2>
-            <p className="mt-5 text-gray-600 text-xl">
-              Need Answers? Need help ? Just email us
-            </p>
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Your email"
-                className="w-full border-2 p-5 pr-14 outline-none text-xl mt-5 border-gray-600 rounded-lg"
-              />
-              <img
-                src={featherSend}
-                alt="feather send"
-                width={30}
-                className="absolute top-11 right-5"
-              />
-            </div>
-          </div>
-        </footer>
-      </section>
-      <div className="bg-sky-950">
-        <p className="text-white text-center p-10 font-semibold text-lg">
-          Designed By Hmimi Chioukh 2022
-        </p>
-      </div>
+      <TestimonialContainer />
+      <Footer />
     </main>
   );
 };
